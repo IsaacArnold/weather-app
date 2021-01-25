@@ -1,0 +1,41 @@
+/* ============================================= */
+/*              Color Variables                  */
+/* ============================================= */
+
+$brand-color-primary: #2D4050;
+$brand-color-secondary: #E5E5E5;
+$accent-color: #EA5455;
+$accent-color-lighten: lighten($accent-color, 10%);
+$accent-color-darken: darken($accent-color, 10%);
+$primary-text-color: #fff;
+$secondary-text-color: #2D4050;
+$default-btn-color: #EA5455;
+$white-txt: #fff;
+$link-color: #7477bf;
+$border-color: #d3d3d3;
+
+// Buttons
+$default: $default-btn-color;
+$error: #e4757a;
+$info: #927bc1;
+$success: #63cc82;
+$warning: #fd7856;
+
+// Button lighten affect -- idea credit: vacaglenn123 Github repo: 4th-techdegree --
+$default-lighten: lighten($default, 15%);
+$error-lighten: lighten($error, 15%);
+$info-lighten: lighten($info, 15%);
+$success-lighten: lighten($success, 15%);
+$warning-lighten: lighten($warning, 15%);
+
+/* ============================================= */
+/*              Media Query Variables                      */
+/* ============================================= */
+
+$breakpoint: 768px;
+
+/* ============================================= */
+/*              Layout Variables                      */
+/* ============================================= */
+
+$max-width: 14000px;

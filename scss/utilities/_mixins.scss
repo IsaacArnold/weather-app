@@ -1,0 +1,8 @@
+// Center containers
+
+@mixin center {
+    max-width: $max-width;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
