@@ -4,8 +4,12 @@ Global variables
 const submitBtn = document.querySelector("#submit");
 
 const apiCall = "http://api.openweathermap.org/data/2.5/weather?q=";
-const apiKey = "&APPID=b272fdac99f51d0efcc03cb32807f2cc";
+const apiKey = config.MY_API_TOKEN;
 const units = "&units=metric";
+
+/* ========================================
+API Call - occurs when a user click submit
+======================================== */
 
 submitBtn.addEventListener("click", () => {
   // Gets the city the user types and inserts it into the apiUrl
