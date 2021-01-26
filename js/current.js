@@ -27,8 +27,8 @@ submitBtn.addEventListener("click", () => {
 function currentWeather(data) {
   weather = data;
   console.log(weather);
-  const city = document.querySelector(".city");
-  city.innerHTML = `
+  const informationDiv = document.querySelector(".information");
+  informationDiv.innerHTML = `
     <p class="city">City: ${weather.name}</p>
     <p class="temp">Temperature: ${weather.main.temp}</p>
     <p class="temp-high">Temperature High: ${weather.main.temp_max}</p>
