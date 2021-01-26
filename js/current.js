@@ -5,7 +5,7 @@ let weather = [];
 
 const submitBtn = document.querySelector("#submit");
 
-const apiCall = "http://api.openweathermap.org/data/2.5/weather?q=";
+const apiCall = "https://api.openweathermap.org/data/2.5/weather?q=";
 const apiKey = "&APPID=b272fdac99f51d0efcc03cb32807f2cc";
 const units = "&units=metric";
 
