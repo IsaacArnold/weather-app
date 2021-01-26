@@ -6,7 +6,7 @@ let weather = [];
 const submitBtn = document.querySelector("#submit");
 
 const apiCall = "http://api.openweathermap.org/data/2.5/weather?q=";
-const apiKey = config.MY_API_TOKEN;
+const apiKey = "&APPID=b272fdac99f51d0efcc03cb32807f2cc";
 const units = "&units=metric";
 
 /* ========================================
