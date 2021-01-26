@@ -1,6 +1,8 @@
 /* ========================================
 Global variables
 ======================================== */
+let weather = [];
+
 const submitBtn = document.querySelector("#submit");
 
 const apiCall = "http://api.openweathermap.org/data/2.5/weather?q=";
@@ -18,6 +20,20 @@ submitBtn.addEventListener("click", () => {
   //   console.log(city);
   fetch(apiUrl)
     .then((response) => response.json())
-    .then((data) => console.log(data))
+    .then((data) => currentWeather(data))
     .catch((err) => console.log(err));
 });
+
+function currentWeather(data) {
+  weather = data;
+  console.log(weather);
+  const city = document.querySelector(".city");
+  city.innerHTML = `
+    <p class="city">City: ${weather.name}</p>
+    <p class="temp">Temperature: ${weather.main.temp}</p>
+    <p class="temp-high">Temperature High: ${weather.main.temp_max}</p>
+    <p class="temp-low">Temperature Low: ${weather.main.temp_min}</p>
+    <p class="conditions">Weather conditions: ${weather.weather[0].main}</p>
+    <p class="humidity">Humidity: ${weather.main.humidity}%</p>
+  `;
+}
