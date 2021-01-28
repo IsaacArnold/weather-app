@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <link rel="stylesheet" href="css/styles.css">
     <title>What's My Weather | Isaac Arnold</title>
 </head>
 <body>
-    <input type="text" id="input" placeholder="New York...">
-    <button type="submit" id="submit">Submit</button>
-    <main class="information">
+    <div class="main-info">
         <p class="city"></p>
         <p class="temp"></p>
         <p class="temp-high"></p>
         <p class="temp-low"></p>
         <p class="conditions"></p>
         <p class="humidity"></p>                
-    </main>
+    </div> <!-- /.main-info -->
+    <div class="secondary-info">
+ 
+    </div> <!-- /.secondary-info -->
+    <div class="search">
+        <input type="text" id="input" placeholder="New York...">
+        <button type="submit" id="submit">Submit</button>
+    </div> <!-- /.search -->
+       
     <script src="js/current.js"></script>
 </body>
 </html>
