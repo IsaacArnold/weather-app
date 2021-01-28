@@ -1,0 +1,16 @@
+/* ============================================= */
+/*        Main Weather Info Section Layout       */
+/* ============================================= */
+
+.main-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .city {
+        margin-bottom: 10px;
+    }
+    .temp {
+        font-size: 1.5em;
+    }
+}

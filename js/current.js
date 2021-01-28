@@ -29,11 +29,13 @@ function currentWeather(data) {
   // console.log(weather);
   const informationDiv = document.querySelector(".main-info");
   informationDiv.innerHTML = `
-    <p class="city">City: ${weather.name}</p>
-    <p class="temp">Temperature: ${weather.main.temp}</p>
-    <p class="temp-high">Temperature High: ${weather.main.temp_max}</p>
-    <p class="temp-low">Temperature Low: ${weather.main.temp_min}</p>
-    <p class="conditions">Weather conditions: ${weather.weather[0].main}</p>
-    <p class="humidity">Humidity: ${weather.main.humidity}%</p>
+    <h1 class="city">${weather.name}</h1>
+    <p class="conditions">${weather.weather[0].main}</p>    
+    <p class="temp">${weather.main.temp}&#8451</p>
   `;
 }
+
+// <p class="temp-high">Temperature High: ${weather.main.temp_max}</p>
+// <p class="temp-low">Temperature Low: ${weather.main.temp_min}</p>
+
+// <p class="humidity">Humidity: ${weather.main.humidity}%</p>
