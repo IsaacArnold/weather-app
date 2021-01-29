@@ -426,19 +426,20 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-grow: 1.5;
 }
 
-/* line 10, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_main-info.scss */
+/* line 11, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_main-info.scss */
 .main-info .city {
   margin-bottom: 10px;
 }
 
-/* line 13, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_main-info.scss */
+/* line 14, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_main-info.scss */
 .main-info .conditions {
   margin-bottom: 0;
 }
 
-/* line 16, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_main-info.scss */
+/* line 17, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_main-info.scss */
 .main-info .temp {
   font-size: 1.5em;
   margin-top: 0;
@@ -450,6 +451,8 @@ body {
 /* line 5, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_secondary-info.scss */
 .secondary-info {
   background: linear-gradient(#005C97, #363796);
+  min-width: 100%;
+  flex-grow: 1;
 }
 
 /* ============================================= */

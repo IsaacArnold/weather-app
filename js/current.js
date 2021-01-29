@@ -28,11 +28,20 @@ function currentWeather(data) {
   weather = data;
   console.log(weather);
   const informationDiv = document.querySelector(".main-info");
+  const secondaryInfo = document.querySelector(".secondary-info");
   informationDiv.innerHTML = `
     <h1 class="city">${weather.name}</h1>
     <p class="conditions">${weather.weather[0].main}</p>
-    <img class="icon" src="http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png" alt="Icon of weather condition">    
+    <img class="icon" src="http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png" alt="Icon of weather condition">
     <p class="temp">${weather.main.temp}&#8451</p>
+  `;
+
+  secondaryInfo.innerHTML = `
+    <div class="">
+      <p class="temp-high">${weather.main.temp_max}&#8451</p>
+      <p class="temp-low">${weather.main.temp_min}&#8451</p>
+      <p class="humidity">${weather.main.humidity}&#x00025</p>
+    </div>
   `;
 }
 
