@@ -6,4 +6,23 @@
     background: linear-gradient(#005C97, #363796);
     min-width: 100%;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    .detailed-temp-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .temp-high,
+        .temp-low,
+        .humidity {
+            background-color: #7CB1D2;
+            margin: 5px;
+            padding: 12px;
+            border-radius: 30px;
+            text-align: center;
+            p {
+                color: #fff;
+            }
+        }
+    }
 }

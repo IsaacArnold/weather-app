@@ -37,10 +37,19 @@ function currentWeather(data) {
   `;
 
   secondaryInfo.innerHTML = `
-    <div class="">
-      <p class="temp-high">${weather.main.temp_max}&#8451</p>
-      <p class="temp-low">${weather.main.temp_min}&#8451</p>
-      <p class="humidity">${weather.main.humidity}&#x00025</p>
+    <div class="detailed-temp-info">
+      <div class="temp-high">
+        <p>Temp High</p>
+        <p>${weather.main.temp_max}&#8451</p>
+      </div>
+      <div class="temp-low">
+        <p>Temp Low</p>
+        <p>${weather.main.temp_min}&#8451</p>
+      </div>
+      <div class="humidity">
+        <p>Humidity</p>
+        <p>${weather.main.humidity}&#x00025</p>
+      </div>
     </div>
   `;
 }
