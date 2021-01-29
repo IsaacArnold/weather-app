@@ -26,11 +26,12 @@ submitBtn.addEventListener("click", () => {
 
 function currentWeather(data) {
   weather = data;
-  // console.log(weather);
+  console.log(weather);
   const informationDiv = document.querySelector(".main-info");
   informationDiv.innerHTML = `
     <h1 class="city">${weather.name}</h1>
-    <p class="conditions">${weather.weather[0].main}</p>    
+    <p class="conditions">${weather.weather[0].main}</p>
+    <img class="icon" src="http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png" alt="Icon of weather condition">    
     <p class="temp">${weather.main.temp}&#8451</p>
   `;
 }
