@@ -14,7 +14,6 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-/* line 11, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
 html {
   line-height: 1.15;
   /* 1 */
@@ -23,41 +22,37 @@ html {
 }
 
 /* Sections
-     ========================================================================== */
+   ========================================================================== */
 /**
-   * Remove the margin in all browsers.
-   */
-/* line 23, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * Remove the margin in all browsers.
+ */
 body {
   margin: 0;
   position: relative;
 }
 
 /**
-   * Render the `main` element consistently in IE.
-   */
-/* line 32, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * Render the `main` element consistently in IE.
+ */
 main {
   display: block;
 }
 
 /**
-   * Correct the font size and margin on `h1` elements within `section` and
-   * `article` contexts in Chrome, Firefox, and Safari.
-   */
-/* line 41, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
 /* Grouping content
-     ========================================================================== */
+   ========================================================================== */
 /**
-   * 1. Add the correct box sizing in Firefox.
-   * 2. Show the overflow in Edge and IE.
-   */
-/* line 54, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
 hr {
   box-sizing: content-box;
   /* 1 */
@@ -68,10 +63,9 @@ hr {
 }
 
 /**
-   * 1. Correct the inheritance and scaling of font size in all browsers.
-   * 2. Correct the odd `em` font sizing in all browsers.
-   */
-/* line 65, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
 pre {
   font-family: monospace, monospace;
   /* 1 */
@@ -80,20 +74,18 @@ pre {
 }
 
 /* Text-level semantics
-     ========================================================================== */
+   ========================================================================== */
 /**
-   * Remove the gray background on active links in IE 10.
-   */
-/* line 77, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * Remove the gray background on active links in IE 10.
+ */
 a {
   background-color: transparent;
 }
 
 /**
-   * 1. Remove the bottom border in Chrome 57-
-   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
-   */
-/* line 86, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
 abbr[title] {
   border-bottom: none;
   /* 1 */
@@ -104,19 +96,17 @@ abbr[title] {
 }
 
 /**
-   * Add the correct font weight in Chrome, Edge, and Safari.
-   */
-/* line 96, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
 b,
 strong {
   font-weight: bolder;
 }
 
 /**
-   * 1. Correct the inheritance and scaling of font size in all browsers.
-   * 2. Correct the odd `em` font sizing in all browsers.
-   */
-/* line 106, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
 code,
 kbd,
 samp {
@@ -127,18 +117,16 @@ samp {
 }
 
 /**
-   * Add the correct font size in all browsers.
-   */
-/* line 117, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * Add the correct font size in all browsers.
+ */
 small {
   font-size: 80%;
 }
 
 /**
-   * Prevent `sub` and `sup` elements from affecting the line height in
-   * all browsers.
-   */
-/* line 126, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
 sub,
 sup {
   font-size: 75%;
@@ -147,33 +135,29 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 134, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
 sub {
   bottom: -0.25em;
 }
 
-/* line 138, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
 sup {
   top: -0.5em;
 }
 
 /* Embedded content
-     ========================================================================== */
+   ========================================================================== */
 /**
-   * Remove the border on images inside links in IE 10.
-   */
-/* line 149, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * Remove the border on images inside links in IE 10.
+ */
 img {
   border-style: none;
 }
 
 /* Forms
-     ========================================================================== */
+   ========================================================================== */
 /**
-   * 1. Change the font styles in all browsers.
-   * 2. Remove the margin in Firefox and Safari.
-   */
-/* line 161, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
 button,
 input,
 optgroup,
@@ -190,10 +174,9 @@ textarea {
 }
 
 /**
-   * Show the overflow in IE.
-   * 1. Show the overflow in Edge.
-   */
-/* line 177, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
 button,
 input {
   /* 1 */
@@ -201,10 +184,9 @@ input {
 }
 
 /**
-   * Remove the inheritance of text transform in Edge, Firefox, and IE.
-   * 1. Remove the inheritance of text transform in Firefox.
-   */
-/* line 187, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
 button,
 select {
   /* 1 */
@@ -212,54 +194,49 @@ select {
 }
 
 /**
-   * Correct the inability to style clickable types in iOS and Safari.
-   */
-/* line 196, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
 /**
-   * Remove the inner border and padding in Firefox.
-   */
-/* line 207, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * Remove the inner border and padding in Firefox.
+ */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
 /**
-   * Restore the focus styles unset by the previous rule.
-   */
-/* line 219, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * Restore the focus styles unset by the previous rule.
+ */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
 /**
-   * Correct the padding in Firefox.
-   */
-/* line 230, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * Correct the padding in Firefox.
+ */
 fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
 
 /**
-   * 1. Correct the text wrapping in Edge and IE.
-   * 2. Correct the color inheritance from `fieldset` elements in IE.
-   * 3. Remove the padding so developers are not caught out when they zero out
-   *    `fieldset` elements in all browsers.
-   */
-/* line 241, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
 legend {
   box-sizing: border-box;
   /* 1 */
@@ -276,28 +253,25 @@ legend {
 }
 
 /**
-   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
-   */
-/* line 254, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
 progress {
   vertical-align: baseline;
 }
 
 /**
-   * Remove the default vertical scrollbar in IE 10+.
-   */
-/* line 262, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * Remove the default vertical scrollbar in IE 10+.
+ */
 textarea {
   overflow: auto;
 }
 
 /**
-   * 1. Add the correct box sizing in IE 10.
-   * 2. Remove the padding in IE 10.
-   */
-/* line 271, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
-[type="checkbox"],
-[type="radio"] {
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -305,20 +279,18 @@ textarea {
 }
 
 /**
-   * Correct the cursor style of increment and decrement buttons in Chrome.
-   */
-/* line 281, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
 /**
-   * 1. Correct the odd appearance in Chrome and Safari.
-   * 2. Correct the outline style in Safari.
-   */
-/* line 291, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
-[type="search"] {
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -326,18 +298,16 @@ textarea {
 }
 
 /**
-   * Remove the inner padding in Chrome and Safari on macOS.
-   */
-/* line 300, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
-[type="search"]::-webkit-search-decoration {
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
 /**
-   * 1. Correct the inability to style clickable types in iOS and Safari.
-   * 2. Change font properties to `inherit` in Safari.
-   */
-/* line 309, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   /* 1 */
@@ -346,37 +316,33 @@ textarea {
 }
 
 /* Interactive
-     ========================================================================== */
+   ========================================================================== */
 /*
-   * Add the correct display in Edge, IE 10+, and Firefox.
-   */
-/* line 321, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
 details {
   display: block;
 }
 
 /*
-   * Add the correct display in all browsers.
-   */
-/* line 329, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * Add the correct display in all browsers.
+ */
 summary {
   display: list-item;
 }
 
 /* Misc
-     ========================================================================== */
+   ========================================================================== */
 /**
-   * Add the correct display in IE 10+.
-   */
-/* line 340, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * Add the correct display in IE 10+.
+ */
 template {
   display: none;
 }
 
 /**
-   * Add the correct display in IE 10.
-   */
-/* line 348, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_normalize.scss */
+ * Add the correct display in IE 10.
+ */
 [hidden] {
   display: none;
 }
@@ -384,9 +350,8 @@ template {
 /* ============================================= */
 /*              Base styles                      */
 /* ============================================= */
-/* line 5, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_typography.scss */
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #fff;
   box-sizing: border-box;
   color: #000;
@@ -398,15 +363,14 @@ template {
 /* ============================================= */
 /*        General Page Layout                    */
 /* ============================================= */
-/* line 5, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_page-styles.scss */
 html {
   scroll-behavior: smooth;
   min-height: 100%;
 }
 
-/* line 10, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_page-styles.scss */
 body {
   height: calc(var(--vh, 1vh) * 100);
+  max-height: calc(var(--vh, 1vh) * 100);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -419,7 +383,6 @@ body {
 /* ============================================= */
 /*        Main Weather Info Section Layout       */
 /* ============================================= */
-/* line 5, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_main-info.scss */
 .main-info {
   margin-top: 30px;
   display: flex;
@@ -427,19 +390,13 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-/* line 11, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_main-info.scss */
 .main-info .city {
   margin-top: 0;
   margin-bottom: 10px;
 }
-
-/* line 15, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_main-info.scss */
 .main-info .conditions {
   margin-bottom: 0;
 }
-
-/* line 18, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_main-info.scss */
 .main-info .temp {
   font-size: 1.5em;
   margin-top: 0;
@@ -448,7 +405,6 @@ body {
 /* ============================================= */
 /*        Secondary Weather Info Section         */
 /* ============================================= */
-/* line 5, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_secondary-info.scss */
 .secondary-info {
   margin-top: auto;
   background: linear-gradient(#005C97, #363796);
@@ -458,15 +414,11 @@ body {
   padding-top: 30px;
   border-radius: 30px 30px 0 0;
 }
-
-/* line 13, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_secondary-info.scss */
 .secondary-info .detailed-temp-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-/* line 17, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_secondary-info.scss */
 .secondary-info .detailed-temp-info .temp-high,
 .secondary-info .detailed-temp-info .temp-low,
 .secondary-info .detailed-temp-info .humidity {
@@ -476,15 +428,11 @@ body {
   border-radius: 30px;
   text-align: center;
 }
-
-/* line 25, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_secondary-info.scss */
 .secondary-info .detailed-temp-info .temp-high p,
 .secondary-info .detailed-temp-info .temp-low p,
 .secondary-info .detailed-temp-info .humidity p {
   color: #fff;
 }
-
-/* line 30, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_secondary-info.scss */
 .secondary-info .sun-info {
   background-color: #7CB1D2;
   margin: 10px 30px;
@@ -495,19 +443,13 @@ body {
   flex-direction: row;
   justify-content: space-around;
 }
-
-/* line 39, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_secondary-info.scss */
 .secondary-info .sun-info p {
   color: #fff;
 }
-
-/* line 42, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_secondary-info.scss */
 .secondary-info .sun-info .sunrise,
 .secondary-info .sun-info .sunset {
   display: flex;
 }
-
-/* line 45, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_secondary-info.scss */
 .secondary-info .sun-info .sunrise .sunset-icon,
 .secondary-info .sun-info .sunrise .sunrise-icon,
 .secondary-info .sun-info .sunset .sunset-icon,
@@ -518,7 +460,6 @@ body {
 /* ============================================= */
 /*        Search Section Layout                  */
 /* ============================================= */
-/* line 5, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_search.scss */
 .search {
   margin: auto;
   margin-bottom: 20px;
