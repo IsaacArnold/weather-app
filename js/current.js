@@ -51,5 +51,15 @@ function currentWeather(data) {
         <p>${weather.main.humidity}&#x00025</p>
       </div>
     </div>
+    <div class="sun-info">
+      <div class="sunrise">
+        <img src="images/sunrise.svg" class="sunrise-icon" alt="Icon of sunrise">
+        <p class="sunrise-time">${weather.sys.sunrise}</p>
+      </div>
+      <div class="sunset">
+        <img src="images/sunset.svg" class="sunset-icon" alt="Icon of sunset">
+        <p class="sunset-time">${weather.sys.sunset}</p>
+      </div>            
+    </div>
   `;
 }
