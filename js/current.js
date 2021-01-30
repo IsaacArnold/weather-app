@@ -14,6 +14,7 @@ API Call - occurs when a user click submit
 ======================================== */
 
 submitBtn.addEventListener("click", () => {
+  console.log("success");
   // Gets the city the user types and inserts it into the apiUrl
   let city = document.querySelector("#input").value;
   const apiUrl = apiCall + city + apiKey + units;
@@ -26,24 +27,12 @@ submitBtn.addEventListener("click", () => {
 
 function currentWeather(data) {
   weather = data;
-  console.log(weather);
-  const informationDiv = document.querySelector(".main-info");
-  const secondaryInfo = document.querySelector(".secondary-info");
+  displayMainInfo();
+  displaySecondaryInfo();
+}
 
-  //  Time convertion method from Aaron Rotteveel's answer on Stackoverflow: https://stackoverflow.com/questions/847185/convert-a-unix-timestamp-to-time-in-javascript
-  // Other inspiration from: https://forum.freecodecamp.org/t/sunrise-and-sunset-calculations-for-api-weather-machine/151949
-  const sunriseUnix = weather.sys.sunrise;
-  const sunrise = new Date(sunriseUnix * 1000);
-  const sunriseHours = sunrise.getHours();
-  const sunriseMinutes = "0" + sunrise.getMinutes();
-  const sunriseTime = `${sunriseHours}:${sunriseMinutes.substr(-2)}`;
-  console.log(sunriseTime);
-  const sunsetUnix = weather.sys.sunset;
-  const sunset = new Date(sunsetUnix * 1000);
-  const sunsetHours = sunset.getHours();
-  const sunsetMinutes = "0" + sunset.getMinutes();
-  const sunsetTime = `${sunsetHours}:${sunsetMinutes.substr(-2)}`;
-  console.log(sunsetTime);
+function displayMainInfo() {
+  const informationDiv = document.querySelector(".main-info");
 
   informationDiv.innerHTML = `
     <h1 class="city">${weather.name}</h1>
@@ -51,6 +40,23 @@ function currentWeather(data) {
     <img class="icon" src="http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png" alt="Icon of weather condition">
     <p class="temp">${weather.main.temp}&#8451</p>
   `;
+}
+
+function displaySecondaryInfo() {
+  const secondaryInfo = document.querySelector(".secondary-info");
+  //  Time convertion method from Aaron Rotteveel's answer on Stackoverflow: https://stackoverflow.com/questions/847185/convert-a-unix-timestamp-to-time-in-javascript
+  // Other inspiration from: https://forum.freecodecamp.org/t/sunrise-and-sunset-calculations-for-api-weather-machine/151949
+  const sunriseUnix = weather.sys.sunrise;
+  const sunrise = new Date(sunriseUnix * 1000);
+  const sunriseHours = sunrise.getHours();
+  const sunriseMinutes = "0" + sunrise.getMinutes();
+  const sunriseTime = `${sunriseHours}:${sunriseMinutes.substr(-2)}`;
+
+  const sunsetUnix = weather.sys.sunset;
+  const sunset = new Date(sunsetUnix * 1000);
+  const sunsetHours = sunset.getHours();
+  const sunsetMinutes = "0" + sunset.getMinutes();
+  const sunsetTime = `${sunsetHours}:${sunsetMinutes.substr(-2)}`;
 
   secondaryInfo.innerHTML = `
     <div class="detailed-temp-info">
@@ -76,11 +82,7 @@ function currentWeather(data) {
         <img src="images/sunset.svg" class="sunset-icon" alt="Icon of sunset">
         <p class="sunset-time">${sunsetTime}</p>
       </div>            
-    </div>
-    <div class="search">
-      <input type="text" id="input" placeholder="New York...">
-      <button type="submit" id="submit">Submit</button>
-    </div> <!-- /.search --> 
+    </div>  
   `;
 }
 
@@ -88,13 +90,11 @@ function currentWeather(data) {
 Mobile viewport script
 -- Addresses the issue of mobile browser UI with 100vh
 =====================================*/
-
 // Listens for when the browser is resized
 window.addEventListener("resize", () => {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty("--vh", `${vh}px`);
 });
-
 // Adds a listener to the refreshing of the page
 window.addEventListener("DOMContentLoaded", () => {
   let vh = window.innerHeight * 0.01;
