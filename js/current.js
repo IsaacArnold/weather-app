@@ -14,7 +14,7 @@ API Call - occurs when a user click submit
 ======================================== */
 
 submitBtn.addEventListener("click", () => {
-  console.log("success");
+  // console.log("success");
   // Gets the city the user types and inserts it into the apiUrl
   let city = document.querySelector("#input").value;
   const apiUrl = apiCall + city + apiKey + units;
@@ -44,6 +44,7 @@ function displayMainInfo() {
 
 function displaySecondaryInfo() {
   const secondaryInfo = document.querySelector(".secondary-info");
+  secondaryInfo.style.display = "flex";
   //  Time convertion method from Aaron Rotteveel's answer on Stackoverflow: https://stackoverflow.com/questions/847185/convert-a-unix-timestamp-to-time-in-javascript
   // Other inspiration from: https://forum.freecodecamp.org/t/sunrise-and-sunset-calculations-for-api-weather-machine/151949
   const sunriseUnix = weather.sys.sunrise;
@@ -82,7 +83,7 @@ function displaySecondaryInfo() {
         <img src="images/sunset.svg" class="sunset-icon" alt="Icon of sunset">
         <p class="sunset-time">${sunsetTime}</p>
       </div>            
-    </div>  
+    </div> 
   `;
 }
 
