@@ -36,13 +36,13 @@ function currentWeather(data) {
   const sunrise = new Date(sunriseUnix * 1000);
   const sunriseHours = sunrise.getHours();
   const sunriseMinutes = "0" + sunrise.getMinutes();
-  const sunriseTime = `${sunriseHours}:${sunriseMinutes.substr(-2)} (NZDT)`;
+  const sunriseTime = `${sunriseHours}:${sunriseMinutes.substr(-2)}`;
   console.log(sunriseTime);
   const sunsetUnix = weather.sys.sunset;
   const sunset = new Date(sunsetUnix * 1000);
   const sunsetHours = sunset.getHours();
   const sunsetMinutes = "0" + sunset.getMinutes();
-  const sunsetTime = `${sunsetHours}:${sunsetMinutes.substr(-2)} (NZDT)`;
+  const sunsetTime = `${sunsetHours}:${sunsetMinutes.substr(-2)}`;
   console.log(sunsetTime);
 
   informationDiv.innerHTML = `
