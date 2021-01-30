@@ -77,5 +77,28 @@ function currentWeather(data) {
         <p class="sunset-time">${sunsetTime}</p>
       </div>            
     </div>
+    <div class="search">
+      <input type="text" id="input" placeholder="New York...">
+      <button type="submit" id="submit">Submit</button>
+    </div> <!-- /.search --> 
   `;
 }
+
+/* ====================================
+Mobile viewport script
+-- Addresses the issue of mobile browser UI with 100vh
+=====================================*/
+
+// Listens for when the browser is resized
+window.addEventListener("resize", () => {
+  // Get the viewport height and multiply to get a value for a vh unit
+  let vh = window.innerHeight * 0.01;
+  // Set the value in the --vh custom property to the root of the document
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+});
+
+// Adds a listener to the refreshing of the page
+window.addEventListener("DOMContentLoaded", () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+});

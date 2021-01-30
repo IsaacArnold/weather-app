@@ -406,8 +406,7 @@ html {
 
 /* line 10, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/base/_page-styles.scss */
 body {
-  min-height: 100vh;
-  max-height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -456,16 +455,18 @@ body {
   min-width: 100%;
   display: flex;
   flex-direction: column;
+  padding-top: 30px;
+  border-radius: 30px 30px 0 0;
 }
 
-/* line 11, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_secondary-info.scss */
+/* line 13, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_secondary-info.scss */
 .secondary-info .detailed-temp-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* line 15, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_secondary-info.scss */
+/* line 17, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_secondary-info.scss */
 .secondary-info .detailed-temp-info .temp-high,
 .secondary-info .detailed-temp-info .temp-low,
 .secondary-info .detailed-temp-info .humidity {
@@ -476,14 +477,14 @@ body {
   text-align: center;
 }
 
-/* line 23, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_secondary-info.scss */
+/* line 25, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_secondary-info.scss */
 .secondary-info .detailed-temp-info .temp-high p,
 .secondary-info .detailed-temp-info .temp-low p,
 .secondary-info .detailed-temp-info .humidity p {
   color: #fff;
 }
 
-/* line 28, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_secondary-info.scss */
+/* line 30, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_secondary-info.scss */
 .secondary-info .sun-info {
   background-color: #7CB1D2;
   margin: 10px 30px;
@@ -495,18 +496,18 @@ body {
   justify-content: space-around;
 }
 
-/* line 37, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_secondary-info.scss */
+/* line 39, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_secondary-info.scss */
 .secondary-info .sun-info p {
   color: #fff;
 }
 
-/* line 40, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_secondary-info.scss */
+/* line 42, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_secondary-info.scss */
 .secondary-info .sun-info .sunrise,
 .secondary-info .sun-info .sunset {
   display: flex;
 }
 
-/* line 43, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_secondary-info.scss */
+/* line 45, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_secondary-info.scss */
 .secondary-info .sun-info .sunrise .sunset-icon,
 .secondary-info .sun-info .sunrise .sunrise-icon,
 .secondary-info .sun-info .sunset .sunset-icon,
@@ -519,6 +520,7 @@ body {
 /* ============================================= */
 /* line 5, ../../../../../../../../../../../../../Users/IsaacArnold/Documents/web-projects/weather-app/scss/components/_search.scss */
 .search {
+  margin: auto;
   margin-bottom: 20px;
 }
 
