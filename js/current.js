@@ -29,6 +29,22 @@ function currentWeather(data) {
   console.log(weather);
   const informationDiv = document.querySelector(".main-info");
   const secondaryInfo = document.querySelector(".secondary-info");
+
+  //  Time convertion method from Aaron Rotteveel's answer on Stackoverflow: https://stackoverflow.com/questions/847185/convert-a-unix-timestamp-to-time-in-javascript
+  // Other inspiration from: https://forum.freecodecamp.org/t/sunrise-and-sunset-calculations-for-api-weather-machine/151949
+  const sunriseUnix = weather.sys.sunrise;
+  const sunrise = new Date(sunriseUnix * 1000);
+  const sunriseHours = sunrise.getHours();
+  const sunriseMinutes = "0" + sunrise.getMinutes();
+  const sunriseTime = `${sunriseHours}:${sunriseMinutes.substr(-2)} (NZDT)`;
+  console.log(sunriseTime);
+  const sunsetUnix = weather.sys.sunset;
+  const sunset = new Date(sunsetUnix * 1000);
+  const sunsetHours = sunset.getHours();
+  const sunsetMinutes = "0" + sunset.getMinutes();
+  const sunsetTime = `${sunsetHours}:${sunsetMinutes.substr(-2)} (NZDT)`;
+  console.log(sunsetTime);
+
   informationDiv.innerHTML = `
     <h1 class="city">${weather.name}</h1>
     <p class="conditions">${weather.weather[0].main}</p>
@@ -54,11 +70,11 @@ function currentWeather(data) {
     <div class="sun-info">
       <div class="sunrise">
         <img src="images/sunrise.svg" class="sunrise-icon" alt="Icon of sunrise">
-        <p class="sunrise-time">${weather.sys.sunrise}</p>
+        <p class="sunrise-time">${sunriseTime}</p>
       </div>
       <div class="sunset">
         <img src="images/sunset.svg" class="sunset-icon" alt="Icon of sunset">
-        <p class="sunset-time">${weather.sys.sunset}</p>
+        <p class="sunset-time">${sunsetTime}</p>
       </div>            
     </div>
   `;
