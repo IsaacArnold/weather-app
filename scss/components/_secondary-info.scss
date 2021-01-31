@@ -15,16 +15,24 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin: 0 30px;
         .temp-high,
         .temp-low,
         .humidity {
+            min-height: 140px;
             background-color: #7CB1D2;
             margin: 5px;
             padding: 12px;
             border-radius: 30px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             p {
                 color: #fff;
+            }
+            & p:last-of-type {
+                margin-top: 0;
             }
         }
     }
