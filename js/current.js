@@ -2,6 +2,8 @@
 Global variables
 ======================================== */
 let weather = [];
+let long;
+let lat;
 
 const submitBtn = document.querySelector("#submit");
 
@@ -27,8 +29,13 @@ submitBtn.addEventListener("click", () => {
 
 function currentWeather(data) {
   weather = data;
+  long = weather.coord.lon;
+  lat = weather.coord.lat;
   displayMainInfo();
   displaySecondaryInfo();
+  console.log(weather);
+  console.log(long);
+  console.log(lat);
 }
 
 function displayMainInfo() {
@@ -37,8 +44,10 @@ function displayMainInfo() {
   informationDiv.innerHTML = `
     <h1 class="city">${weather.name}</h1>
     <p class="conditions">${weather.weather[0].main}</p>
-    <img class="icon" src="http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png" alt="Icon of weather condition">
-    <p class="temp">${weather.main.temp}&#8451</p>
+    <img class="icon" src="http://openweathermap.org/img/wn/${
+      weather.weather[0].icon
+    }@2x.png" alt="Icon of weather condition">
+    <p class="temp">${Math.round(weather.main.temp)}&#8451</p>
   `;
 }
 
@@ -66,11 +75,11 @@ function displaySecondaryInfo() {
     <div class="detailed-temp-info">
       <div class="temp-low">
         <p>Temp Low</p>
-        <p>${weather.main.temp_min}&#8451</p>
+        <p>${Math.round(weather.main.temp_min)}&#8451</p>
       </div>
       <div class="temp-high">
         <p>Temp High</p>
-        <p>${weather.main.temp_max}&#8451</p>
+        <p>${Math.round(weather.main.temp_max)}&#8451</p>
       </div>
       <div class="humidity">
         <p>Humidity</p>
