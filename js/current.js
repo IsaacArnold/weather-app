@@ -7,9 +7,12 @@ let lat;
 
 const submitBtn = document.querySelector("#submit");
 
-const apiCall = "https://api.openweathermap.org/data/2.5/weather?q=";
+const currentWeatherApiCall =
+  "https://api.openweathermap.org/data/2.5/weather?q=";
 const apiKey = "&APPID=b272fdac99f51d0efcc03cb32807f2cc";
 const units = "&units=metric";
+
+const oneCallApi = "https://api.openweathermap.org/data/2.5/onecall?";
 
 /* ========================================
 API Call - occurs when a user click submit
@@ -19,9 +22,9 @@ submitBtn.addEventListener("click", () => {
   // console.log("success");
   // Gets the city the user types and inserts it into the apiUrl
   let city = document.querySelector("#input").value;
-  const apiUrl = apiCall + city + apiKey + units;
+  const currentWeatherApiUrl = currentWeatherApiCall + city + apiKey + units;
   //   console.log(city);
-  fetch(apiUrl)
+  fetch(currentWeatherApiUrl)
     .then((response) => response.json())
     .then((data) => currentWeather(data))
     .catch((err) => console.log(err));
@@ -36,6 +39,19 @@ function currentWeather(data) {
   console.log(weather);
   console.log(long);
   console.log(lat);
+
+  // const oneCallApiUrl =
+  //   oneCallApi +
+  //   "lat=" +
+  //   lat +
+  //   "&lon=" +
+  //   long +
+  //   "&exclude=minutely" +
+  //   units +
+  //   apiKey;
+  // fetch(oneCallApiUrl)
+  //   .then((response) => response.json())
+  //   .then((data) => console.log(data));
 }
 
 function displayMainInfo() {
