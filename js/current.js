@@ -60,6 +60,9 @@ function displaySecondaryInfo() {
   const sunsetTime = `${sunsetHours}:${sunsetMinutes.substr(-2)}`;
 
   secondaryInfo.innerHTML = `
+    <div class="day">
+      <p>Today</p>
+    </div>
     <div class="detailed-temp-info">
       <div class="temp-low">
         <p>Temp Low</p>

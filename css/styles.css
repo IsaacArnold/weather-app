@@ -412,8 +412,8 @@ body {
   min-width: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 30px;
-  padding-bottom: 80px;
+  padding-top: 10px;
+  padding-bottom: 70px;
   border-radius: 30px 30px 0 0;
 }
 .secondary-info .detailed-temp-info {
@@ -467,6 +467,13 @@ body {
 .secondary-info .sun-info .sunset .sunset-icon,
 .secondary-info .sun-info .sunset .sunrise-icon {
   margin-right: 10px;
+}
+.secondary-info .day {
+  display: flex;
+  margin: 0 40px;
+}
+.secondary-info .day p {
+  color: #fff;
 }
 
 /* ============================================= */
