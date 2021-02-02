@@ -2,10 +2,12 @@
 Global variables
 ======================================== */
 let weather = [];
+let cords = [];
 let long;
 let lat;
 
 const submitBtn = document.querySelector("#submit");
+const geoBtn = document.querySelector("#geo");
 
 const currentWeatherApiCall =
   "https://api.openweathermap.org/data/2.5/weather?q=";
@@ -32,13 +34,30 @@ submitBtn.addEventListener("click", () => {
 
 function currentWeather(data) {
   weather = data;
-  long = weather.coord.lon;
-  lat = weather.coord.lat;
+  // long = weather.coord.lon;
+  // lat = weather.coord.lat;
   displayMainInfo();
   displaySecondaryInfo();
   console.log(weather);
-  console.log(long);
-  console.log(lat);
+}
+
+/* ========================================
+One Call API - occurs when a user click submit
+======================================== */
+
+geoBtn.addEventListener("click", () => {
+  navigator.geolocation.getCurrentPosition(success, error);
+
+  function success(pos) {
+    cords = pos;
+    console.log(cords);
+    lat = cords.coords.latitude;
+    long = cords.coords.longitude;
+    console.log(lat);
+  }
+  function error(err) {
+    alert(`ERROR(${err.code}): ${err.message}`);
+  }
 
   // const oneCallApiUrl =
   //   oneCallApi +
@@ -52,7 +71,11 @@ function currentWeather(data) {
   // fetch(oneCallApiUrl)
   //   .then((response) => response.json())
   //   .then((data) => console.log(data));
-}
+});
+
+/* ========================================
+Functions
+======================================== */
 
 function displayMainInfo() {
   const informationDiv = document.querySelector(".main-info");

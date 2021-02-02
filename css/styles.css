@@ -483,7 +483,15 @@ body {
   margin: auto;
 }
 
-#submit {
+.locate-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#submit,
+#geo {
   display: inline-flex;
   justify-content: center;
   align-items: center;
