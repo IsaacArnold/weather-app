@@ -42,7 +42,7 @@ function displayMainInfo() {
   const informationDiv = document.querySelector(".main-info");
 
   informationDiv.innerHTML = `
-    <h1 class="city">${weather.name}</h1>
+    <h1 class="city">${weather.name}, ${weather.sys.country}</h1>
     <p class="conditions">${weather.weather[0].main}</p>
     <img class="icon" src="http://openweathermap.org/img/wn/${
       weather.weather[0].icon
