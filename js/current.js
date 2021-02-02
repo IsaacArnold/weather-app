@@ -64,7 +64,7 @@ function displaySecondaryInfo() {
 
   const sunsetUnix = weather.sys.sunset;
   const sunset = new Date(sunsetUnix * 1000);
-  const sunsetHours = sunset.getHours();
+  const sunsetHours = sunset.getHours() % 12;
   const sunsetMinutes = "0" + sunset.getMinutes();
   const sunsetTime = `${sunsetHours}:${sunsetMinutes.substr(-2)}`;
 
