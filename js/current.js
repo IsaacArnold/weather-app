@@ -3,75 +3,51 @@ Global variables
 ======================================== */
 let weather = [];
 let cords = [];
-let long;
-let lat;
+let forecast = [];
 
 const submitBtn = document.querySelector("#submit");
 const geoBtn = document.querySelector("#geo");
 
 const currentWeatherApiCall =
   "https://api.openweathermap.org/data/2.5/weather?q=";
+const forecastWeatherApiCall =
+  "https://api.openweathermap.org/data/2.5/forecast?q=";
 const apiKey = "&APPID=b272fdac99f51d0efcc03cb32807f2cc";
 const units = "&units=metric";
-
-const oneCallApi = "https://api.openweathermap.org/data/2.5/onecall?";
 
 /* ========================================
 API Call - occurs when a user click submit
 ======================================== */
 
 submitBtn.addEventListener("click", () => {
-  // console.log("success");
   // Gets the city the user types and inserts it into the apiUrl
   let city = document.querySelector("#input").value;
   const currentWeatherApiUrl = currentWeatherApiCall + city + apiKey + units;
-  //   console.log(city);
+  const forecastWeatherApiUrl = forecastWeatherApiCall + city + apiKey + units;
+
   fetch(currentWeatherApiUrl)
     .then((response) => response.json())
     .then((data) => currentWeather(data))
+    .catch((err) => console.log(err));
+
+  fetch(forecastWeatherApiUrl)
+    .then((response) => response.json())
+    .then((data) => forecastWeather(data))
     .catch((err) => console.log(err));
 });
 
 function currentWeather(data) {
   weather = data;
-  // long = weather.coord.lon;
-  // lat = weather.coord.lat;
   displayMainInfo();
   displaySecondaryInfo();
-  console.log(weather);
+  // console.log(weather);
 }
 
-/* ========================================
-One Call API - occurs when a user click submit
-======================================== */
-
-geoBtn.addEventListener("click", () => {
-  navigator.geolocation.getCurrentPosition(success, error);
-
-  function success(pos) {
-    cords = pos;
-    console.log(cords);
-    lat = cords.coords.latitude;
-    long = cords.coords.longitude;
-    console.log(lat);
-  }
-  function error(err) {
-    alert(`ERROR(${err.code}): ${err.message}`);
-  }
-
-  // const oneCallApiUrl =
-  //   oneCallApi +
-  //   "lat=" +
-  //   lat +
-  //   "&lon=" +
-  //   long +
-  //   "&exclude=minutely" +
-  //   units +
-  //   apiKey;
-  // fetch(oneCallApiUrl)
-  //   .then((response) => response.json())
-  //   .then((data) => console.log(data));
-});
+function forecastWeather(data) {
+  forecast = data;
+  console.log(forecast);
+  console.log(forecast.list[2].main.temp);
+}
 
 /* ========================================
 Functions
