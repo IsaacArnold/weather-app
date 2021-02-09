@@ -86,6 +86,7 @@ function displaySecondaryInfo() {
   secondaryInfo.innerHTML = `
     <div class="day">
       <p>Today</p>
+      <p>Forecast</p>
     </div>
     <div class="detailed-temp-info">
       <div class="temp-low">

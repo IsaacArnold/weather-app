@@ -474,6 +474,8 @@ body {
 }
 .secondary-info .day p {
   color: #fff;
+  margin-right: 20px;
+  cursor: pointer;
 }
 
 /* ============================================= */
