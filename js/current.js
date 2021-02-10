@@ -2,11 +2,12 @@
 Global variables
 ======================================== */
 let weather = [];
-let cords = [];
 let forecast = [];
 
+const secondaryInfo = document.querySelector(".secondary-info");
+const todayBtn = document.querySelector("#today");
+const forecastBtn = document.querySelector("#forecast");
 const submitBtn = document.querySelector("#submit");
-const geoBtn = document.querySelector("#geo");
 
 const currentWeatherApiCall =
   "https://api.openweathermap.org/data/2.5/weather?q=";
@@ -49,6 +50,15 @@ function forecastWeather(data) {
   console.log(forecast.list[2].main.temp);
 }
 
+document.body.addEventListener("click", (e) => {
+  if (e.target && e.target.id == "forecast") {
+    displayForecastInfo();
+  }
+  if (e.target && e.target.id == "today") {
+    displayMainInfo();
+    displaySecondaryInfo();
+  }
+});
 /* ========================================
 Functions
 ======================================== */
@@ -67,8 +77,7 @@ function displayMainInfo() {
 }
 
 function displaySecondaryInfo() {
-  const secondaryInfo = document.querySelector(".secondary-info");
-  secondaryInfo.style.display = "flex";
+  secondaryInfo.style.display = "";
   //  Time convertion method from Aaron Rotteveel's answer on Stackoverflow: https://stackoverflow.com/questions/847185/convert-a-unix-timestamp-to-time-in-javascript
   // Other inspiration from: https://forum.freecodecamp.org/t/sunrise-and-sunset-calculations-for-api-weather-machine/151949
   const sunriseUnix = weather.sys.sunrise;
@@ -85,8 +94,8 @@ function displaySecondaryInfo() {
 
   secondaryInfo.innerHTML = `
     <div class="day">
-      <p>Today</p>
-      <p>Forecast</p>
+      <p id="today">Today</p>
+      <p id="forecast">Forecast</p>
     </div>
     <div class="detailed-temp-info">
       <div class="temp-low">
@@ -110,6 +119,41 @@ function displaySecondaryInfo() {
       <div class="sunset">
         <img src="images/sunset.svg" class="sunset-icon" alt="Icon of sunset">
         <p class="sunset-time">${sunsetTime}</p>
+      </div>            
+    </div> 
+  `;
+}
+
+function displayForecastInfo() {
+  secondaryInfo.style.display = "";
+
+  secondaryInfo.innerHTML = `
+    <div class="day">
+      <p id="today">Today</p>
+      <p id="forecast">Forecast</p>
+    </div>
+    <div class="detailed-temp-info">
+      <div class="temp-low">
+        <p>Forecast</p>
+        <p>${Math.round(weather.main.temp_min)}&#8451</p>
+      </div>
+      <div class="temp-high">
+        <p>Temp High</p>
+        <p>${Math.round(weather.main.temp_max)}&#8451</p>
+      </div>
+      <div class="humidity">
+        <p>Humidity</p>
+        <p>${weather.main.humidity}&#x00025</p>
+      </div>
+    </div>
+    <div class="sun-info">
+      <div class="sunrise">
+        <img src="images/sunrise.svg" class="sunrise-icon" alt="Icon of sunrise">
+        <p class="sunrise-time"></p>
+      </div>
+      <div class="sunset">
+        <img src="images/sunset.svg" class="sunset-icon" alt="Icon of sunset">
+        <p class="sunset-time"></p>
       </div>            
     </div> 
   `;
