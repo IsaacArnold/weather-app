@@ -426,7 +426,8 @@ body {
 .secondary-info .detailed-temp-info .temp-low,
 .secondary-info .detailed-temp-info .humidity {
   min-height: 140px;
-  background-color: #7CB1D2;
+  background: rgba(124, 177, 210, 0.3);
+  backdrop-filter: blur(5px);
   margin: 5px;
   padding: 12px;
   border-radius: 30px;
@@ -446,7 +447,8 @@ body {
   margin-top: 0;
 }
 .secondary-info .sun-info {
-  background-color: #7CB1D2;
+  background: rgba(124, 177, 210, 0.3);
+  backdrop-filter: blur(5px);
   margin: 10px 30px;
   padding: 12px;
   border-radius: 30px;
