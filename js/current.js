@@ -11,8 +11,6 @@ const submitBtn = document.querySelector("#submit");
 
 const currentWeatherApiCall =
   "https://api.openweathermap.org/data/2.5/weather?q=";
-const forecastWeatherApiCall =
-  "https://api.openweathermap.org/data/2.5/forecast?q=";
 const apiKey = "&APPID=b272fdac99f51d0efcc03cb32807f2cc";
 const units = "&units=metric";
 
@@ -24,16 +22,11 @@ submitBtn.addEventListener("click", () => {
   // Gets the city the user types and inserts it into the apiUrl
   let city = document.querySelector("#input").value;
   const currentWeatherApiUrl = currentWeatherApiCall + city + apiKey + units;
-  const forecastWeatherApiUrl = forecastWeatherApiCall + city + apiKey + units;
+  // const forecastWeatherApiUrl = forecastWeatherApiCall + city + apiKey + units;
 
   fetch(currentWeatherApiUrl)
     .then((response) => response.json())
     .then((data) => currentWeather(data))
-    .catch((err) => console.log(err));
-
-  fetch(forecastWeatherApiUrl)
-    .then((response) => response.json())
-    .then((data) => forecastWeather(data))
     .catch((err) => console.log(err));
 });
 
@@ -41,13 +34,23 @@ function currentWeather(data) {
   weather = data;
   displayMainInfo();
   displaySecondaryInfo();
-  // console.log(weather);
+  console.log(weather);
+  lat = weather.coord.lat;
+  lon = weather.coord.lon;
+
+  const oneCallUrl = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=current,hourly,minutely&APPID=b272fdac99f51d0efcc03cb32807f2cc`;
+
+  // Placing this fetch() inside the currentWeather function so that we can use the lon & lat of the current city the user searches
+  fetch(oneCallUrl)
+    .then((response) => response.json())
+    .then((details) => forecastWeather(details))
+    .catch((err) => console.log(err));
 }
 
-function forecastWeather(data) {
-  forecast = data;
+function forecastWeather(details) {
+  forecast = details;
   console.log(forecast);
-  console.log(forecast.list[2].main.temp);
+  // console.log(forecast.list[2].main.temp);
 }
 
 document.body.addEventListener("click", (e) => {
