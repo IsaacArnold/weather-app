@@ -426,6 +426,7 @@ body {
 .secondary-info .detailed-temp-info .temp-low,
 .secondary-info .detailed-temp-info .humidity {
   min-height: 140px;
+  min-width: 100px;
   background: rgba(124, 177, 210, 0.3);
   backdrop-filter: blur(5px);
   margin: 5px;
