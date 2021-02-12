@@ -38,7 +38,7 @@ function currentWeather(data) {
   lat = weather.coord.lat;
   lon = weather.coord.lon;
 
-  const oneCallUrl = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=current,hourly,minutely&APPID=b272fdac99f51d0efcc03cb32807f2cc`;
+  const oneCallUrl = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=current,hourly,minutely&APPID=b272fdac99f51d0efcc03cb32807f2cc&units=metric`;
 
   // Placing this fetch() inside the currentWeather function so that we can use the lon & lat of the current city the user searches
   fetch(oneCallUrl)
@@ -129,6 +129,17 @@ function displaySecondaryInfo() {
 
 function displayForecastInfo() {
   secondaryInfo.style.display = "";
+  dates = forecast.daily;
+
+  dates.forEach((day) => {
+    const dayUnix = day.dt;
+    const d = new Date(dayUnix * 1000);
+    const dateDay = new Intl.DateTimeFormat("en-US", {
+      dateStyle: "medium",
+    }).format(d);
+    const theDay = dateDay.substr(0, 6);
+    console.log(theDay);
+  });
 
   secondaryInfo.innerHTML = `
     <div class="day">
@@ -138,7 +149,7 @@ function displayForecastInfo() {
     <div class="detailed-temp-info">
       <div class="temp-low">
         <p>Forecast</p>
-        <p>${Math.round(weather.main.temp_min)}&#8451</p>
+        <p>${Math.round(forecast.daily[0].temp.day)}&#8451</p>
       </div>
       <div class="temp-high">
         <p>Temp High</p>
@@ -146,7 +157,7 @@ function displayForecastInfo() {
       </div>
       <div class="humidity">
         <p>Humidity</p>
-        <p>${weather.main.humidity}&#x00025</p>
+        <p>${forecast.daily[0].humidity}&#x00025</p>
       </div>
     </div>
     <div class="sun-info">
