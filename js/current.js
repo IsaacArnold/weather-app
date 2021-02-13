@@ -8,6 +8,8 @@ const secondaryInfo = document.querySelector(".secondary-info");
 const todayBtn = document.querySelector("#today");
 const forecastBtn = document.querySelector("#forecast");
 const submitBtn = document.querySelector("#submit");
+const forecastGrid = document.querySelector(".forecast-grid");
+const forecastInfoDiv = document.querySelector(".forecast-info");
 
 const currentWeatherApiCall =
   "https://api.openweathermap.org/data/2.5/weather?q=";
@@ -49,7 +51,7 @@ function currentWeather(data) {
 
 function forecastWeather(details) {
   forecast = details;
-  console.log(forecast);
+  // console.log(forecast);
   // console.log(forecast.list[2].main.temp);
 }
 
@@ -128,49 +130,48 @@ function displaySecondaryInfo() {
 }
 
 function displayForecastInfo() {
+  // console.log(forecast);
   secondaryInfo.style.display = "";
   dates = forecast.daily;
 
+  let forecastHTML = "";
+
   dates.forEach((day) => {
-    const dayUnix = day.dt;
-    const d = new Date(dayUnix * 1000);
-    const dateDay = new Intl.DateTimeFormat("en-US", {
+    let conditions = day.weather[0].main;
+    let minTemp = Math.round(day.temp.min);
+    let maxTemp = Math.round(day.temp.max);
+    let icon = day.weather[0].icon;
+    let timestamp = day.dt;
+    let d = new Date(timestamp * 1000);
+    let formattedDate = new Intl.DateTimeFormat("en-US", {
       dateStyle: "medium",
-    }).format(d);
-    const theDay = dateDay.substr(0, 6);
-    console.log(theDay);
+    })
+      .format(d)
+      .substr(0, 6);
+
+    forecastHTML += `
+    <div class="forecast-info">
+      <p>${formattedDate}</p>
+      <p>${conditions}</p>
+      <p>${icon}</p>
+      <p>Min: ${minTemp}&#8451</p>
+      <p>Max: ${maxTemp}&#8451</p>               
+    </div> 
+    `;
+
+    // console.log(forecastHTML);
   });
 
   secondaryInfo.innerHTML = `
-    <div class="day">
-      <p id="today">Today</p>
-      <p id="forecast">Forecast</p>
-    </div>
-    <div class="detailed-temp-info">
-      <div class="temp-low">
-        <p>Forecast</p>
-        <p>${Math.round(forecast.daily[0].temp.day)}&#8451</p>
+      <div class="day">
+        <p id="today">Today</p>
+        <p id="forecast">Forecast</p>
       </div>
-      <div class="temp-high">
-        <p>Temp High</p>
-        <p>${Math.round(weather.main.temp_max)}&#8451</p>
-      </div>
-      <div class="humidity">
-        <p>Humidity</p>
-        <p>${forecast.daily[0].humidity}&#x00025</p>
-      </div>
-    </div>
-    <div class="sun-info">
-      <div class="sunrise">
-        <img src="images/sunrise.svg" class="sunrise-icon" alt="Icon of sunrise">
-        <p class="sunrise-time"></p>
-      </div>
-      <div class="sunset">
-        <img src="images/sunset.svg" class="sunset-icon" alt="Icon of sunset">
-        <p class="sunset-time"></p>
-      </div>            
-    </div> 
-  `;
+      <div class="forecast-grid"></div>
+    `;
+  forecastGrid.innerHTML = forecastHTML;
+  console.log(forecastGrid);
+  // console.log(secondaryInfo);
 }
 
 /* ====================================
