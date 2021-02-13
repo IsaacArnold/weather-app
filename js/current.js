@@ -40,7 +40,7 @@ function currentWeather(data) {
   lat = weather.coord.lat;
   lon = weather.coord.lon;
 
-  const oneCallUrl = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=current,hourly,minutely&APPID=b272fdac99f51d0efcc03cb32807f2cc&units=metric`;
+  const oneCallUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=current,hourly,minutely&APPID=b272fdac99f51d0efcc03cb32807f2cc&units=metric`;
 
   // Placing this fetch() inside the currentWeather function so that we can use the lon & lat of the current city the user searches
   fetch(oneCallUrl)
@@ -167,12 +167,20 @@ function displayForecastInfo() {
         <p id="today">Today</p>
         <p id="forecast">Forecast</p>
       </div>
-      <div class="forecast-grid"></div>
+      <div class="forecast-grid">
+        <div class="forecast-info">
+          <p>${formattedDate}</p>
+          <p>${conditions}</p>
+          <p>${icon}</p>
+          <p>Min: ${minTemp}&#8451</p>
+          <p>Max: ${maxTemp}&#8451</p>               
+        </div> 
+      </div>
     `;
 
-  forecastGrid.innerHTML = forecastHTML;
+  // forecastGrid.innerHTML = forecastHTML;
 
-  console.log(forecastGrid);
+  // console.log(forecastGrid);
 }
 
 /* ====================================
