@@ -169,9 +169,10 @@ function displayForecastInfo() {
       </div>
       <div class="forecast-grid"></div>
     `;
+
   forecastGrid.innerHTML = forecastHTML;
+
   console.log(forecastGrid);
-  // console.log(secondaryInfo);
 }
 
 /* ====================================
