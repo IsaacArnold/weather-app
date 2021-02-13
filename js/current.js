@@ -55,7 +55,7 @@ function forecastWeather(details) {
   // console.log(forecast.list[2].main.temp);
 }
 
-document.body.addEventListener("click", (e) => {
+document.addEventListener("click", (e) => {
   if (e.target && e.target.id == "forecast") {
     displayForecastInfo();
   }
