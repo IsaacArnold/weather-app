@@ -442,6 +442,23 @@ body {
 .secondary-info .forecast-grid .forecast-info p {
   color: #fff;
 }
+.secondary-info .forecast-grid .forecast-info .formatted-date {
+  font-weight: 700;
+}
+.secondary-info .forecast-grid .forecast-info .forecast-conditions {
+  margin-top: 0;
+  font-size: 0.8em;
+}
+.secondary-info .forecast-grid .forecast-info .forecast-icon {
+  width: 85%;
+  margin: auto;
+}
+.secondary-info .forecast-grid .forecast-info .forecast-min {
+  margin-bottom: 10px;
+}
+.secondary-info .forecast-grid .forecast-info .forecast-max {
+  margin-top: 10px;
+}
 .secondary-info .detailed-temp-info {
   display: flex;
   justify-content: space-between;

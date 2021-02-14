@@ -57,7 +57,6 @@ function forecastWeather(details) {
 
 document.addEventListener("click", (e) => {
   if (e.target && e.target.id == "forecast") {
-    detailedTempInfoDiv.style.display = "none";
     displayForecastInfo();
   }
   if (e.target && e.target.id == "today") {
@@ -131,7 +130,6 @@ function displaySecondaryInfo() {
 }
 
 function displayForecastInfo() {
-  // console.log(forecast);
   dates = forecast.daily;
   let conditions = "";
   let minTemp = "";
@@ -141,7 +139,7 @@ function displayForecastInfo() {
   let d = "";
   let formattedDate = ";";
 
-  let forecastInfo = "";
+  let forecastInfoHTML = "";
 
   dates.forEach((day) => {
     conditions = day.weather[0].main;
@@ -156,13 +154,13 @@ function displayForecastInfo() {
       .format(d)
       .substr(0, 6);
 
-    forecastInfo += `
+    forecastInfoHTML += `
       <div class="forecast-info">
-          <p>${formattedDate}</p>
-          <p>${conditions}</p>
-          <p>${icon}</p>
-          <p>Min: ${minTemp}&#8451</p>
-          <p>Max: ${maxTemp}&#8451</p>               
+          <p class="formatted-date">${formattedDate}</p>
+          <p class="forecast-conditions">${conditions}</p>
+          <img class="forecast-icon" src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="Icon of weather condition">
+          <p class="forecast-min">Min: ${minTemp}&#8451</p>
+          <p class="forecast-max">Max: ${maxTemp}&#8451</p>               
       </div> 
     `;
   });
@@ -175,8 +173,7 @@ function displayForecastInfo() {
       <div class="forecast-grid"></div>
     `;
 
-  forecastGrid.innerHTML = forecastInfo;
-  console.log(forecastGrid);
+  document.querySelector(".forecast-grid").innerHTML = forecastInfoHTML;
 
   // forecastGrid.innerHTML = forecastHTML;
 

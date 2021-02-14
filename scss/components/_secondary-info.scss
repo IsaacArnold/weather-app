@@ -37,6 +37,23 @@
             p {
                 color: #fff;
             }
+            .formatted-date {
+                font-weight: 700;
+            }
+            .forecast-conditions {
+                margin-top: 0;
+                font-size: .8em;
+            }
+            .forecast-icon {
+                width: 85%;
+                margin: auto;
+            }
+            .forecast-min {
+                margin-bottom: 10px;
+            }
+            .forecast-max {
+                margin-top: 10px;
+            }
           }
     }
 
