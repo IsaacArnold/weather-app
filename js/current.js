@@ -174,10 +174,6 @@ function displayForecastInfo() {
     `;
 
   document.querySelector(".forecast-grid").innerHTML = forecastInfoHTML;
-
-  // forecastGrid.innerHTML = forecastHTML;
-
-  // console.log(forecastGrid);
 }
 
 /* ====================================
