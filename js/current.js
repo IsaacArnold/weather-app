@@ -10,6 +10,8 @@ const forecastBtn = document.querySelector("#forecast");
 const submitBtn = document.querySelector("#submit");
 const forecastGrid = document.querySelector(".forecast-grid");
 const forecastInfoDiv = document.querySelector(".forecast-info");
+const detailedTempInfoDiv = document.querySelector(".detailed-temp-info");
+const sunInfoDiv = document.querySelector(".sun-info");
 
 const currentWeatherApiCall =
   "https://api.openweathermap.org/data/2.5/weather?q=";
@@ -51,12 +53,11 @@ function currentWeather(data) {
 
 function forecastWeather(details) {
   forecast = details;
-  // console.log(forecast);
-  // console.log(forecast.list[2].main.temp);
 }
 
 document.addEventListener("click", (e) => {
   if (e.target && e.target.id == "forecast") {
+    detailedTempInfoDiv.style.display = "none";
     displayForecastInfo();
   }
   if (e.target && e.target.id == "today") {
@@ -131,35 +132,39 @@ function displaySecondaryInfo() {
 
 function displayForecastInfo() {
   // console.log(forecast);
-  secondaryInfo.style.display = "";
   dates = forecast.daily;
+  let conditions = "";
+  let minTemp = "";
+  let maxTemp = "";
+  let icon = "";
+  let timestamp = "";
+  let d = "";
+  let formattedDate = ";";
 
-  let forecastHTML = "";
+  let forecastInfo = "";
 
   dates.forEach((day) => {
-    let conditions = day.weather[0].main;
-    let minTemp = Math.round(day.temp.min);
-    let maxTemp = Math.round(day.temp.max);
-    let icon = day.weather[0].icon;
-    let timestamp = day.dt;
-    let d = new Date(timestamp * 1000);
-    let formattedDate = new Intl.DateTimeFormat("en-US", {
+    conditions = day.weather[0].main;
+    minTemp = Math.round(day.temp.min);
+    maxTemp = Math.round(day.temp.max);
+    icon = day.weather[0].icon;
+    timestamp = day.dt;
+    d = new Date(timestamp * 1000);
+    formattedDate = new Intl.DateTimeFormat("en-US", {
       dateStyle: "medium",
     })
       .format(d)
       .substr(0, 6);
 
-    forecastHTML += `
-    <div class="forecast-info">
-      <p>${formattedDate}</p>
-      <p>${conditions}</p>
-      <p>${icon}</p>
-      <p>Min: ${minTemp}&#8451</p>
-      <p>Max: ${maxTemp}&#8451</p>               
-    </div> 
+    forecastInfo += `
+      <div class="forecast-info">
+          <p>${formattedDate}</p>
+          <p>${conditions}</p>
+          <p>${icon}</p>
+          <p>Min: ${minTemp}&#8451</p>
+          <p>Max: ${maxTemp}&#8451</p>               
+      </div> 
     `;
-
-    // console.log(forecastHTML);
   });
 
   secondaryInfo.innerHTML = `
@@ -167,16 +172,11 @@ function displayForecastInfo() {
         <p id="today">Today</p>
         <p id="forecast">Forecast</p>
       </div>
-      <div class="forecast-grid">
-        <div class="forecast-info">
-          <p>${formattedDate}</p>
-          <p>${conditions}</p>
-          <p>${icon}</p>
-          <p>Min: ${minTemp}&#8451</p>
-          <p>Max: ${maxTemp}&#8451</p>               
-        </div> 
-      </div>
+      <div class="forecast-grid"></div>
     `;
+
+  forecastGrid.innerHTML = forecastInfo;
+  console.log(forecastGrid);
 
   // forecastGrid.innerHTML = forecastHTML;
 
