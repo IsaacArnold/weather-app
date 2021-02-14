@@ -6,6 +6,7 @@
     margin-top: auto;
     background: linear-gradient(#005C97, #363796);
     min-width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     padding-top: 10px;
@@ -23,7 +24,7 @@
         grid-auto-flow: column;
         overflow-x: auto;
         margin: 0 30px;
-        max-width: 550px;
+        // max-width: 550px;
         min-height: 300px;
         .forecast-info {
             min-height: 140px;
