@@ -420,11 +420,14 @@ body {
 }
 .secondary-info .forecast-grid {
   display: grid;
-  grid-template-columns: repeat(4, 116px);
   grid-gap: 10px;
-  justify-content: center;
-  margin: auto;
-  width: 100%;
+  grid-template-rows: 250px;
+  grid-template-columns: repeat(auto-fill, minmax(116px, 1fr));
+  grid-auto-flow: column;
+  overflow-x: auto;
+  margin: 0 30px;
+  max-width: 550px;
+  min-height: 300px;
 }
 .secondary-info .forecast-grid .forecast-info {
   min-height: 140px;
