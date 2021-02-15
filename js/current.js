@@ -133,6 +133,8 @@ function displayForecastInfo() {
   let icon = "";
   let timestamp = "";
   let d = "";
+  let month = "";
+  let dateNum = "";
   let formattedDate = ";";
 
   let forecastInfoHTML = "";
@@ -144,11 +146,9 @@ function displayForecastInfo() {
     icon = day.weather[0].icon;
     timestamp = day.dt;
     d = new Date(timestamp * 1000);
-    formattedDate = new Intl.DateTimeFormat("en-US", {
-      dateStyle: "medium",
-    })
-      .format(d)
-      .substr(0, 6);
+    month = d.toLocaleString("en-US", { month: "short" });
+    dateNum = d.getDate();
+    formattedDate = `${month} ${dateNum}`;
 
     forecastInfoHTML += `
       <div class="forecast-info">
