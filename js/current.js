@@ -70,6 +70,7 @@ Functions
 
 function displayMainInfo() {
   const informationDiv = document.querySelector(".main-info");
+  const weatherIcon = weather.weather[0].icon;
 
   informationDiv.innerHTML = `
     <h1 class="city">${weather.name}, ${weather.sys.country}</h1>
@@ -138,6 +139,8 @@ function displayForecastInfo() {
   let formattedDate = ";";
 
   let forecastInfoHTML = "";
+
+  // Date conversion for iOS devices from my Stackoverflow question and answered by Mellet: https://stackoverflow.com/questions/66201045/issue-with-date-format-on-ios-devices-vanilla-js
 
   dates.forEach((day) => {
     conditions = day.weather[0].main;

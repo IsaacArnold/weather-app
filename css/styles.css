@@ -404,6 +404,9 @@ body {
   font-size: 1.5em;
   margin-top: 0;
 }
+.main-info img {
+  width: 40%;
+}
 
 /* ============================================= */
 /*        Secondary Weather Info Section         */
