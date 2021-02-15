@@ -105,15 +105,11 @@ function displaySecondaryInfo() {
     <div class="detailed-temp-info">
       <div class="temp-low">
         <p>Temp Low</p>
-        <p>${Math.round(weather.main.temp_min)}&#8451</p>
+        <p>${Math.floor(weather.main.temp_min)}&#8451</p>
       </div>
       <div class="temp-high">
         <p>Temp High</p>
-        <p>${Math.round(weather.main.temp_max)}&#8451</p>
-      </div>
-      <div class="humidity">
-        <p>Humidity</p>
-        <p>${weather.main.humidity}&#x00025</p>
+        <p>${Math.floor(weather.main.temp_max)}&#8451</p>
       </div>
     </div>
     <div class="sun-info">

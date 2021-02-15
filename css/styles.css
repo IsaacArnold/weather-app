@@ -377,6 +377,7 @@ body {
   align-items: center;
   background: lightsteelblue;
   max-width: 100%;
+  padding-top: 15px;
 }
 
 /* ============================================= */
@@ -471,8 +472,7 @@ body {
   margin: 0 30px;
 }
 .secondary-info .detailed-temp-info .temp-high,
-.secondary-info .detailed-temp-info .temp-low,
-.secondary-info .detailed-temp-info .humidity {
+.secondary-info .detailed-temp-info .temp-low {
   min-height: 140px;
   min-width: 100px;
   background: rgba(124, 177, 210, 0.3);
@@ -486,14 +486,17 @@ body {
   justify-content: center;
 }
 .secondary-info .detailed-temp-info .temp-high p,
-.secondary-info .detailed-temp-info .temp-low p,
-.secondary-info .detailed-temp-info .humidity p {
+.secondary-info .detailed-temp-info .temp-low p {
   color: #fff;
 }
 .secondary-info .detailed-temp-info .temp-high p:last-of-type,
-.secondary-info .detailed-temp-info .temp-low p:last-of-type,
-.secondary-info .detailed-temp-info .humidity p:last-of-type {
+.secondary-info .detailed-temp-info .temp-low p:last-of-type {
   margin-top: 0;
+}
+@media (min-width: 320px) {
+  .secondary-info .humidity {
+    display: none;
+  }
 }
 .secondary-info .sun-info {
   background: rgba(124, 177, 210, 0.3);
@@ -534,7 +537,6 @@ body {
 /* ============================================= */
 .search {
   margin: auto;
-  margin-top: 10px;
 }
 
 .locate-options {

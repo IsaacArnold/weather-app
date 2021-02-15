@@ -69,8 +69,7 @@
         margin: 0 30px;
 
         .temp-high,
-        .temp-low,
-        .humidity {
+        .temp-low {
             min-height: 140px;
             min-width: 100px;
             background: rgba(124, 177, 210, 0.30);
@@ -82,7 +81,6 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-
             p {
                 color: #fff;
             }
@@ -92,6 +90,11 @@
             }
         }
     }
+                @media (min-width: 320px) {
+                    .humidity {
+                        display: none;
+                    }
+                }
 
     .sun-info {
         background: rgba(124, 177, 210, 0.30);
