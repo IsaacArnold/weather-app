@@ -67,6 +67,9 @@
         justify-content: space-between;
         align-items: center;
         margin: 0 30px;
+        @media (min-width: 375px) {
+            justify-content: center;
+        }
 
         .temp-high,
         .temp-low {
@@ -88,25 +91,35 @@
             & p:last-of-type {
                 margin-top: 0;
             }
+            @media (min-width: 375px) {
+                &.temp-low {
+                    margin: 0;
+                }
+                &.temp-high {
+                    margin-left: 50px;
+                    margin-right: 0;
+                }
+            }
         }
     }
-                @media (min-width: 320px) {
-                    .humidity {
-                        display: none;
-                    }
-                }
 
     .sun-info {
-        background: rgba(124, 177, 210, 0.30);
-        backdrop-filter: blur(5px);
-        margin: 10px 30px;
+        background: rgba(255, 255, 255, 0.10);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(2.0px);
+        -webkit-backdrop-filter: blur(2.0px);
+        margin: 10px auto;
         padding: 12px;
         border-radius: 30px;
         text-align: center;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-
+        min-width: 260px;
+        @media (min-width: 375px) {
+            width: 315px;
+            max-width: 315px;
+        }
         p {
             color: #fff;
         }

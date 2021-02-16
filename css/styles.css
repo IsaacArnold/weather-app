@@ -471,6 +471,11 @@ body {
   align-items: center;
   margin: 0 30px;
 }
+@media (min-width: 375px) {
+  .secondary-info .detailed-temp-info {
+    justify-content: center;
+  }
+}
 .secondary-info .detailed-temp-info .temp-high,
 .secondary-info .detailed-temp-info .temp-low {
   min-height: 140px;
@@ -493,21 +498,36 @@ body {
 .secondary-info .detailed-temp-info .temp-low p:last-of-type {
   margin-top: 0;
 }
-@media (min-width: 320px) {
-  .secondary-info .humidity {
-    display: none;
+@media (min-width: 375px) {
+  .secondary-info .detailed-temp-info .temp-high.temp-low,
+.secondary-info .detailed-temp-info .temp-low.temp-low {
+    margin: 0;
+  }
+  .secondary-info .detailed-temp-info .temp-high.temp-high,
+.secondary-info .detailed-temp-info .temp-low.temp-high {
+    margin-left: 50px;
+    margin-right: 0;
   }
 }
 .secondary-info .sun-info {
-  background: rgba(124, 177, 210, 0.3);
-  backdrop-filter: blur(5px);
-  margin: 10px 30px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  margin: 10px auto;
   padding: 12px;
   border-radius: 30px;
   text-align: center;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  min-width: 260px;
+}
+@media (min-width: 375px) {
+  .secondary-info .sun-info {
+    width: 315px;
+    max-width: 315px;
+  }
 }
 .secondary-info .sun-info p {
   color: #fff;
