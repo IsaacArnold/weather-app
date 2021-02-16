@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    max-width: 1024px;
+    max-width: 1080px;
     margin: auto;
     height: calc(var(--vh, 1vh) * 100);
     max-height: calc(var(--vh, 1vh) * 100);
@@ -17,7 +17,7 @@ body {
     justify-content: center;
     align-items: center;
     padding-top: 15px;
-    // background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+    background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
     // background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
-    background-image: linear-gradient(-45deg, #FFC796 0%, #FF6B95 100%);
+    // background-image: linear-gradient(-45deg, #FFC796 0%, #FF6B95 100%);
 }
