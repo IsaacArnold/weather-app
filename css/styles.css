@@ -377,8 +377,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: lightsteelblue;
   padding-top: 15px;
+  background-image: linear-gradient(-45deg, #FFC796 0%, #FF6B95 100%);
 }
 
 /* ============================================= */
@@ -397,13 +397,17 @@ body {
 .main-info .city {
   margin-top: 0;
   margin-bottom: 10px;
+  color: #fff;
+  font-size: 1.8em;
 }
 .main-info .conditions {
   margin-bottom: 0;
+  color: #fff;
 }
 .main-info .temp {
   font-size: 1.5em;
   margin-top: 0;
+  color: #fff;
 }
 
 /* ============================================= */
@@ -411,7 +415,11 @@ body {
 /* ============================================= */
 .secondary-info {
   margin-top: auto;
-  background: linear-gradient(#005C97, #363796);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   min-width: 100%;
   max-width: 100%;
   display: flex;
@@ -435,8 +443,7 @@ body {
 .secondary-info .forecast-grid .forecast-info {
   min-height: 140px;
   min-width: 100px;
-  background: rgba(124, 177, 210, 0.3);
-  backdrop-filter: blur(5px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   margin: 5px;
   padding: 12px;
   border-radius: 30px;
@@ -481,8 +488,11 @@ body {
 .secondary-info .detailed-temp-info .temp-low {
   min-height: 140px;
   min-width: 100px;
-  background: rgba(124, 177, 210, 0.3);
-  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   margin: 5px;
   padding: 12px;
   border-radius: 30px;
@@ -513,11 +523,11 @@ body {
 .secondary-info .sun-info {
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  margin: 10px auto;
+  margin: auto;
+  margin-top: 20px;
   padding: 12px;
   border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -572,11 +582,32 @@ body {
   justify-content: center;
   align-items: center;
   padding: 5px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 18px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 10px;
-  border: none;
-  background: linear-gradient(#005C97, #363796);
   color: #fff;
   cursor: pointer;
+}
+
+input[type=text] {
+  padding-left: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 18px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  color: #fff;
+}
+input[type=text]::placeholder {
+  color: #fff;
+}
+input[type=text]:focus {
+  outline: none;
+  color: #fff;
 }
 
 /*# sourceMappingURL=styles.css.map */
