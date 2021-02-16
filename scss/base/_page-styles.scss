@@ -8,6 +8,8 @@ html {
 }
 
 body {
+    max-width: 1024px;
+    margin: auto;
     height: calc(var(--vh, 1vh) * 100);
     max-height: calc(var(--vh, 1vh) * 100);
     display: flex;
@@ -15,6 +17,5 @@ body {
     justify-content: center;
     align-items: center;
     background: lightsteelblue;
-    max-width: 100%;
     padding-top: 15px;
 }
