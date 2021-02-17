@@ -44,10 +44,12 @@ function currentWeather(data) {
     .catch((err) => console.log(err));
 }
 
+// Stores the data from the above fetch() into a global variable
 function forecastWeather(details) {
   forecast = details;
 }
 
+// Checking to see which display the user clicks on
 document.addEventListener("click", (e) => {
   if (e.target && e.target.id == "forecast") {
     displayForecastInfo();
@@ -135,6 +137,7 @@ function displayForecastInfo() {
 
   // Date conversion for iOS devices from my Stackoverflow question and answered by Mellet: https://stackoverflow.com/questions/66201045/issue-with-date-format-on-ios-devices-vanilla-js
 
+  // Runs through each day and displays data accordingly
   dates.forEach((day) => {
     conditions = day.weather[0].main;
     minTemp = Math.round(day.temp.min);
@@ -165,6 +168,7 @@ function displayForecastInfo() {
       <div class="forecast-grid"></div>
     `;
 
+  // Creates the HTML for the forecast data and injects it into the DOM
   document.querySelector(".forecast-grid").innerHTML = forecastInfoHTML;
 }
 
