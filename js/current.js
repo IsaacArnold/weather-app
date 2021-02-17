@@ -5,13 +5,7 @@ let weather = [];
 let forecast = [];
 
 const secondaryInfo = document.querySelector(".secondary-info");
-const todayBtn = document.querySelector("#today");
-const forecastBtn = document.querySelector("#forecast");
 const submitBtn = document.querySelector("#submit");
-const forecastGrid = document.querySelector(".forecast-grid");
-const forecastInfoDiv = document.querySelector(".forecast-info");
-const detailedTempInfoDiv = document.querySelector(".detailed-temp-info");
-const sunInfoDiv = document.querySelector(".sun-info");
 
 const currentWeatherApiCall =
   "https://api.openweathermap.org/data/2.5/weather?q=";
@@ -26,7 +20,6 @@ submitBtn.addEventListener("click", () => {
   // Gets the city the user types and inserts it into the apiUrl
   let city = document.querySelector("#input").value;
   const currentWeatherApiUrl = currentWeatherApiCall + city + apiKey + units;
-  // const forecastWeatherApiUrl = forecastWeatherApiCall + city + apiKey + units;
 
   fetch(currentWeatherApiUrl)
     .then((response) => response.json())
@@ -39,8 +32,8 @@ function currentWeather(data) {
   displayMainInfo();
   displaySecondaryInfo();
   console.log(weather);
-  lat = weather.coord.lat;
-  lon = weather.coord.lon;
+  let lat = weather.coord.lat;
+  let lon = weather.coord.lon;
 
   const oneCallUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=current,hourly,minutely&APPID=b272fdac99f51d0efcc03cb32807f2cc&units=metric`;
 
@@ -127,7 +120,7 @@ function displaySecondaryInfo() {
 }
 
 function displayForecastInfo() {
-  dates = forecast.daily;
+  let dates = forecast.daily;
   let conditions = "";
   let minTemp = "";
   let maxTemp = "";
