@@ -70,7 +70,7 @@ function displayMainInfo() {
   informationDiv.innerHTML = `
     <h1 class="city">${weather.name}, ${weather.sys.country}</h1>
     <p class="conditions">${weather.weather[0].main}</p>
-    <img class="icon" src="../icons/${weatherIcon}.svg" alt="Icon of weather condition">
+    <img class="icon" src="icons/${weatherIcon}.svg" alt="Icon of weather condition">
     <p class="temp">${Math.round(weather.main.temp)}&#8451</p>
   `;
 }
@@ -151,7 +151,7 @@ function displayForecastInfo() {
       <div class="forecast-info">
           <p class="formatted-date">${formattedDate}</p>
           <p class="forecast-conditions">${conditions}</p>
-          <img class="forecast-icon" src="../icons/${icon}.svg" alt="Icon of weather condition">
+          <img class="forecast-icon" src="icons/${icon}.svg" alt="Icon of weather condition">
           <p class="forecast-min">Min: ${minTemp}&#8451</p>
           <p class="forecast-max">Max: ${maxTemp}&#8451</p>               
       </div> 
