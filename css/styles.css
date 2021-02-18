@@ -409,6 +409,9 @@ body {
   margin-top: 0;
   color: #fff;
 }
+.main-info .icon {
+  width: 65%;
+}
 
 /* ============================================= */
 /*        Secondary Weather Info Section         */
@@ -461,13 +464,15 @@ body {
 }
 .secondary-info .forecast-grid .forecast-info .forecast-conditions {
   margin-top: 0;
+  margin-bottom: 0;
   font-size: 0.8em;
 }
 .secondary-info .forecast-grid .forecast-info .forecast-icon {
-  width: 85%;
+  width: 90%;
   margin: auto;
 }
 .secondary-info .forecast-grid .forecast-info .forecast-min {
+  margin-top: 5px;
   margin-bottom: 10px;
 }
 .secondary-info .forecast-grid .forecast-info .forecast-max {
