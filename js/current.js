@@ -70,7 +70,7 @@ function displayMainInfo() {
   informationDiv.innerHTML = `
     <h1 class="city">${weather.name}, ${weather.sys.country}</h1>
     <p class="conditions">${weather.weather[0].main}</p>
-    <img class="icon" src="icons/${weatherIcon}.svg" alt="Icon of weather condition">
+    <img class="icon" src="icons/${weatherIcon}.svg" alt="Icon of weather conditionsssss">
     <p class="temp">${Math.round(weather.main.temp)}&#8451</p>
   `;
 }
