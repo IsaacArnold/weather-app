@@ -488,6 +488,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 0 30px;
+  margin-top: 10px;
 }
 @media (min-width: 375px) {
   .secondary-info .detailed-temp-info {
@@ -564,6 +565,7 @@ body {
   margin-right: 10px;
 }
 .secondary-info .day {
+  position: relative;
   display: flex;
   margin: 0 40px;
 }
@@ -571,6 +573,32 @@ body {
   color: #fff;
   margin-right: 20px;
   cursor: pointer;
+}
+.secondary-info .day .dot {
+  position: absolute;
+  top: 38px;
+  left: 16px;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 8, 68, 0.7);
+  box-shadow: 0 7px 12px 0 rgba(22, 22, 26, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+}
+.secondary-info .day .dot-forecast {
+  position: absolute;
+  top: 38px;
+  left: 88px;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 8, 68, 0.7);
+  box-shadow: 0 7px 12px 0 rgba(22, 22, 26, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
 }
 
 /* ============================================= */
