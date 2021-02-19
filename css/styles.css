@@ -577,9 +577,9 @@ body {
 .secondary-info .day .dot {
   position: absolute;
   top: 38px;
-  left: 16px;
-  width: 10px;
-  height: 10px;
+  left: 20px;
+  width: 5px;
+  height: 5px;
   background: rgba(255, 8, 68, 0.7);
   box-shadow: 0 7px 12px 0 rgba(22, 22, 26, 0.37);
   backdrop-filter: blur(2px);
@@ -590,9 +590,9 @@ body {
 .secondary-info .day .dot-forecast {
   position: absolute;
   top: 38px;
-  left: 88px;
-  width: 10px;
-  height: 10px;
+  left: 94px;
+  width: 5px;
+  height: 5px;
   background: rgba(255, 8, 68, 0.7);
   box-shadow: 0 7px 12px 0 rgba(22, 22, 26, 0.37);
   backdrop-filter: blur(2px);
