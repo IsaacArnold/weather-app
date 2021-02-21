@@ -30,7 +30,6 @@ submitBtn.addEventListener("click", () => {
 function currentWeather(data) {
   weather = data;
   displayMainInfo();
-  displaySecondaryInfo();
   console.log(weather);
   let lat = weather.coord.lat;
   let lon = weather.coord.lon;
@@ -47,6 +46,8 @@ function currentWeather(data) {
 // Stores the data from the above fetch() into a global variable
 function forecastWeather(details) {
   forecast = details;
+  // Moved displaySecondaryInfo() function into this fetch() so that I can use the oneCall current temp for the 'today' mins and maxes
+  displaySecondaryInfo();
 }
 
 // Checking to see which display the user clicks on
@@ -59,6 +60,7 @@ document.addEventListener("click", (e) => {
     displaySecondaryInfo();
   }
 });
+
 /* ========================================
 Functions
 ======================================== */
@@ -101,11 +103,11 @@ function displaySecondaryInfo() {
     <div class="detailed-temp-info">
       <div class="temp-low">
         <p>Temp Low</p>
-        <p>${Math.floor(weather.main.temp_min)}&#8451</p>
+        <p>${Math.round(forecast.daily[0].temp.min)}&#8451</p>
       </div>
       <div class="temp-high">
         <p>Temp High</p>
-        <p>${Math.floor(weather.main.temp_max)}&#8451</p>
+        <p>${Math.round(forecast.daily[0].temp.max)}&#8451</p>
       </div>
     </div>
     <div class="sun-info">
