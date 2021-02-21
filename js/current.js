@@ -93,8 +93,6 @@ function displaySecondaryInfo() {
 
   secondaryInfo.innerHTML = `
     <div class="day">
-      <div class="dot"></div>
-      <div class="dot-forecast" style="display:none"></div>
       <p id="today">Today</p>
       <p id="forecast">Forecast</p>
     </div>
@@ -162,8 +160,6 @@ function displayForecastInfo() {
 
   secondaryInfo.innerHTML = `
       <div class="day">
-        <div class="dot" style="display:none"></div>
-        <div class="dot-forecast"></div>
         <p id="today">Today</p>
         <p id="forecast">Forecast</p>
       </div>
